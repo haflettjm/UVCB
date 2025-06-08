@@ -8,12 +8,13 @@ A universal chat app bridge for all popular and some non popular services
  - VRChat
  - Discord
  - Matrix
+ - QQ
+ - XMPP
 Maybe(s):
  - Telegram
-
+ -
 
 ### Language(s):
  - golang (Backend)
- - Angular
- - Automated Deployement Tf (JS)
-
+ - Automated Deployement Tf (TS)
+ - Nuxt/Vue
