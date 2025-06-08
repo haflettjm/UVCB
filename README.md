@@ -1,6 +1,6 @@
 # UVCB - Universal Virtual Chat Bridge
 
-UVCB (Universal Virtual Chat Bridge) is a universal chat app bridge for connecting conversations across a wide range of messaging platforms—both popular and niche. It supports not just text messaging but also voice and video communication, allowing seamless cross-platform interoperability. The backend is written in Golang.
+UVCB (Universal Virtual Chat Bridge) is a universal chat app bridge for connecting conversations across a wide range of messaging platforms—both popular and niche. It supports not just text messaging but also voice and video communication, allowing seamless cross-platform interoperability. The backend and bot support is written in Golang (working on VRc Integration soon).
 
 ---
 
