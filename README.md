@@ -4,6 +4,7 @@ Bridge voice, video, and text across Discord, VRChat, and more — from a single
 
 Online communities are fragmented across platforms. Your Discord server, VRChat world, Mumble channel, and Matrix room each hold part of the conversation. UVCB bridges them together — relaying voice, video, and text in real time so nobody has to switch apps to stay connected. It's open source, self-hostable, and built for communities that refuse to live on just one platform.
 
+## As a side Note I did generate the readme with claude but I wrote everything else. I am lazy and I'm sorry.
 ---
 
 ## Supported Platforms

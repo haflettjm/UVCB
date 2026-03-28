@@ -397,3 +397,4 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 .claude/
+PROMPT.md
