@@ -398,3 +398,5 @@ FakesAssemblies/
 *.opt
 .claude/
 PROMPT.md
+.env
+config.yaml

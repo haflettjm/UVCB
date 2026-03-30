@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 
+	"github.com/joho/godotenv"
 	"gopkg.in/yaml.v3"
 )
 
@@ -64,7 +65,7 @@ type WorldConfig struct {
 }
 
 type VRChatConfig struct {
-	Token   string      `yaml:"token"`
+	Token   string
 	Enabled bool        `yaml:"enabled"`
 	RTMP    RTMPConfig  `yaml:"rtmp"`
 	OSC     OSCConfig   `yaml:"osc"`
@@ -73,7 +74,7 @@ type VRChatConfig struct {
 }
 
 type DiscordConfig struct {
-	Token           string   `yaml:"token"`
+	Token           string
 	GuildIDs        []uint64 `yaml:"guild_ids"`
 	TextChannelIDs  []uint64 `yaml:"text_channel_ids"`
 	VoiceChannelIDs []uint64 `yaml:"voice_channel_ids"`
@@ -90,6 +91,7 @@ type Config struct {
 }
 
 func Load(path string) (Config, error) {
+	err := godotenv.Load()
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return Config{}, err
@@ -99,5 +101,12 @@ func Load(path string) (Config, error) {
 	if err != nil {
 		return Config{}, err
 	}
+	conf.Discord.Token = os.Getenv("UVCB_DISCORD_TOKEN")
+	conf.VRChat.Token = os.Getenv("UVCB_VRCHAT_TOKEN")
+	conf.Database.Password = os.Getenv("UVCB_DB_PASSWORD")
+	conf.VRChat.RTMP.StreamKey = os.Getenv("UVCB_RTMP_STREAM_KEY")
+	conf.Redis.Password = os.Getenv("UVCB_REDIS_PASSWORD")
+	conf.NATS.Token = os.Getenv("UVCB_NATS_TOKEN")
+
 	return conf, nil
 }

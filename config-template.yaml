@@ -1,0 +1,52 @@
+# UVCB Configuration Template
+# Copy this to config.yaml and fill in your values
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "uvcb"
+  db_name: "uvcb"
+
+redis:
+  url: "localhost"
+  port: 6379
+
+nats:
+  url: "nats://localhost:4222"
+
+discord:
+  guild_ids: []
+  text_channel_ids: []
+  voice_channel_ids: []
+  enabled: false
+
+vrchat:
+  enabled: false
+  rtmp:
+    stream_url: "rtmp://localhost:1935/live"
+    video_bitrate: 2500
+    audio_bitrate: 128
+    res_w: 1280
+    res_h: 720
+    framerate: 30
+    ffmpeg_path: "/usr/bin/ffmpeg"
+    enabled: false
+  osc:
+    target_ip: "127.0.0.1"
+    target_port: 9000
+    enabled: false
+    message_format: "chatbox"
+  srs:
+    address: "localhost"
+    rtmp_port: 1935
+    rtsp_port: 8554
+    enabled: false
+  world:
+    world_id: ""
+    instance_id: ""
+    status_api_path: "/api/status"
+    allowed_world_ids: []
